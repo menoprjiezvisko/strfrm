@@ -3,52 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Strategie Forum Program</title>
+  <meta name="description" content="Program konferencie Strategie Forum 2025 – marketing, digital, media." />
+  <title>Strategie Forum 2025 – Program</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
+      background: #111;
+      color: #eee;
       text-align: center;
     }
     header {
-          background: url(bckground.jpg) center / cover no-repeat;
-    height: 128px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background-position-y: -145px;
+      background: url('bckground.jpg') center / cover no-repeat;
+      height: 128px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background-position-y: -145px;
     }
     h1 {
       font-size: 1.8rem;
-      background: rgb(231 191 251 / 25%);
-      padding: 10px;
+      background: rgba(231, 191, 251, 0.25);
+      padding: 10px 20px;
       border-radius: 15px;
     }
-    .tabs {
+    nav.tabs {
       display: flex;
-      justify-content: space-around;
-      background: #111;
+      justify-content: center;
+      background: #000;
       border-bottom: 2px solid #ff007f;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     .tab {
-      flex: 1;
-      padding: 15px;
+      padding: 15px 25px;
       cursor: pointer;
       font-weight: bold;
       border-bottom: 3px solid transparent;
-      transition: border-color 0.3s;
+      transition: all 0.3s ease;
+    }
+    .tab:hover {
+      background: #222;
     }
     .tab.active {
       border-bottom: 3px solid #ff007f;
       color: #ff007f;
     }
-    .content {
+    main {
       padding: 20px;
     }
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin-top: 10px;
+    }
     footer {
-      background: #111;
+      background: #000;
       padding: 20px;
       font-size: 0.9rem;
     }
@@ -56,9 +67,10 @@
       color: #ff007f;
       margin: 0 10px;
       text-decoration: none;
+      transition: color 0.2s ease;
     }
-    ul {
-          text-align: left;
+    footer a:hover {
+      color: #fff;
     }
     @media (max-width: 600px) {
       h1 {
@@ -76,28 +88,28 @@
     <h1>STRATEGIE FORUM</h1>
   </header>
 
-  <div class="tabs">
-    <div class="tab active" data-stage="marketing">Marketing stage</div>
-    <div class="tab" data-stage="digital">Digital stage</div>
-    <div class="tab" data-stage="media">Media stage</div>
-  </div>
+  <nav class="tabs" role="tablist">
+    <div class="tab active" data-stage="marketing" role="tab" aria-selected="true">Marketing stage</div>
+    <div class="tab" data-stage="digital" role="tab" aria-selected="false">Digital stage</div>
+    <div class="tab" data-stage="media" role="tab" aria-selected="false">Media stage</div>
+  </nav>
 
-  <div class="content" id="program">
+  <main id="program">
     <h2>Marketing Stage</h2>
     <ul>
-      <li>10:00 - Otvorenie konferencie</li>
-      <li>10:30 - Trendy v marketingu 2025</li>
-      <li>11:30 - Panelová diskusia: Budúcnosť značiek</li>
+      <li>10:00 – Otvorenie konferencie</li>
+      <li>10:30 – Trendy v marketingu 2025</li>
+      <li>11:30 – Panelová diskusia: Budúcnosť značiek</li>
     </ul>
-  </div>
+  </main>
 
-   <div class="content">
+  <section>
     <h2>Partneri</h2>
-<img src="https://konferencie.hnonline.sk/media/content/media/strategie_forum_2025_1280x470_1/stream.jpg" alt="Logo" style="width:95%; display:block; margin:0 auto 10px;" />
-  </div>
+    <img src="https://konferencie.hnonline.sk/media/content/media/strategie_forum_2025_1280x470_1/stream.jpg" alt="Banner konferencie" style="width:95%; display:block; margin:0 auto 10px; border-radius:10px;" />
+  </section>
 
   <footer>
-    <img src="https://www.sohk.sk/img/dynamicContent/companies/logo_sk_22654.jpg" alt="Logo" style="width:100px; display:block; margin:0 auto 10px;" />
+    <img src="https://www.sohk.sk/img/dynamicContent/companies/logo_sk_22654.jpg" alt="Logo partnera" style="width:100px; display:block; margin:0 auto 10px;" />
     <div>
       <a href="https://konferencie.hnonline.sk/produkt/strategie-forum-2025">Kontakt</a>|
       <a href="https://konferencie.hnonline.sk/produkt/strategie-forum-2025">O konferencii</a>|
@@ -113,25 +125,25 @@
       marketing: `
         <h2>Marketing Stage</h2>
         <ul>
-          <li>10:00 - Otvorenie konferencie</li>
-          <li>10:30 - Trendy v marketingu 2025</li>
-          <li>11:30 - Panelová diskusia: Budúcnosť značiek</li>
+          <li>10:00 – Otvorenie konferencie</li>
+          <li>10:30 – Trendy v marketingu 2025</li>
+          <li>11:30 – Panelová diskusia: Budúcnosť značiek</li>
         </ul>
       `,
       digital: `
         <h2>Digital Stage</h2>
         <ul>
-          <li>10:00 - Digitalizácia médií</li>
-          <li>11:00 - AI v reklame</li>
-          <li>12:00 - Networking</li>
+          <li>10:00 – Digitalizácia médií</li>
+          <li>11:00 – AI v reklame</li>
+          <li>12:00 – Networking</li>
         </ul>
       `,
       media: `
         <h2>Media Stage</h2>
         <ul>
-          <li>10:00 - Zmeny v mediálnom prostredí</li>
-          <li>11:00 - Panel: TV vs. Online</li>
-          <li>12:00 - Budúcnosť printu</li>
+          <li>10:00 – Zmeny v mediálnom prostredí</li>
+          <li>11:00 – Panel: TV vs. Online</li>
+          <li>12:00 – Budúcnosť printu</li>
         </ul>
       `
     };
@@ -140,6 +152,8 @@
       tab.addEventListener('click', () => {
         document.querySelector('.tab.active').classList.remove('active');
         tab.classList.add('active');
+        tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+        tab.setAttribute('aria-selected', 'true');
         const stage = tab.getAttribute('data-stage');
         program.innerHTML = schedules[stage];
       });
