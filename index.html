@@ -43,20 +43,35 @@
       border-bottom: 3px solid transparent;
       transition: all 0.3s ease;
     }
+    .tab.marketing.active {
+      border-color: #ff007f;
+      color: #ff007f;
+    }
+    .tab.digital.active {
+      border-color: #00bfff;
+      color: #00bfff;
+    }
+    .tab.media.active {
+      border-color: #32cd32;
+      color: #32cd32;
+    }
     .tab:hover {
       background: #222;
     }
-    .tab.active {
-      border-bottom: 3px solid #ff007f;
-      color: #ff007f;
-    }
     main {
       padding: 20px;
+      transition: opacity 0.3s ease;
     }
     ul {
       text-align: left;
       display: inline-block;
       margin-top: 10px;
+    }
+    li.current {
+      background: rgba(255,255,255,0.1);
+      font-weight: bold;
+      padding: 5px;
+      border-radius: 5px;
     }
     footer {
       background: #000;
@@ -89,9 +104,9 @@
   </header>
 
   <nav class="tabs" role="tablist">
-    <div class="tab active" data-stage="marketing" role="tab" aria-selected="true">Marketing stage</div>
-    <div class="tab" data-stage="digital" role="tab" aria-selected="false">Digital stage</div>
-    <div class="tab" data-stage="media" role="tab" aria-selected="false">Media stage</div>
+    <div class="tab marketing active" data-stage="marketing" role="tab" aria-selected="true">Marketing stage</div>
+    <div class="tab digital" data-stage="digital" role="tab" aria-selected="false">Digital stage</div>
+    <div class="tab media" data-stage="media" role="tab" aria-selected="false">Media stage</div>
   </nav>
 
   <main id="program">
@@ -105,11 +120,13 @@
 
   <section>
     <h2>Partneri</h2>
-    <img src="https://konferencie.hnonline.sk/media/content/media/strategie_forum_2025_1280x470_1/stream.jpg" alt="Banner konferencie" style="width:95%; display:block; margin:0 auto 10px; border-radius:10px;" />
+    <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px;">
+      <img src="https://konferencie.hnonline.sk/media/content/media/strategie_forum_2025_1280x470_1/stream.jpg" alt="Banner konferencie" style="width:300px; border-radius:10px;" />
+      <img src="https://www.sohk.sk/img/dynamicContent/companies/logo_sk_22654.jpg" alt="Logo partnera" style="width:100px; border-radius:10px;" />
+    </div>
   </section>
 
   <footer>
-    <img src="https://www.sohk.sk/img/dynamicContent/companies/logo_sk_22654.jpg" alt="Logo partnera" style="width:100px; display:block; margin:0 auto 10px;" />
     <div>
       <a href="https://konferencie.hnonline.sk/produkt/strategie-forum-2025">Kontakt</a>|
       <a href="https://konferencie.hnonline.sk/produkt/strategie-forum-2025">O konferencii</a>|
@@ -125,28 +142,44 @@
       marketing: `
         <h2>Marketing Stage</h2>
         <ul>
-          <li>10:00 – Otvorenie konferencie</li>
-          <li>10:30 – Trendy v marketingu 2025</li>
-          <li>11:30 – Panelová diskusia: Budúcnosť značiek</li>
+          <li data-time="10:00">10:00 – Otvorenie konferencie</li>
+          <li data-time="10:30">10:30 – Trendy v marketingu 2025</li>
+          <li data-time="11:30">11:30 – Panelová diskusia: Budúcnosť značiek</li>
         </ul>
       `,
       digital: `
         <h2>Digital Stage</h2>
         <ul>
-          <li>10:00 – Digitalizácia médií</li>
-          <li>11:00 – AI v reklame</li>
-          <li>12:00 – Networking</li>
+          <li data-time="10:00">10:00 – Digitalizácia médií</li>
+          <li data-time="11:00">11:00 – AI v reklame</li>
+          <li data-time="12:00">12:00 – Networking</li>
         </ul>
       `,
       media: `
         <h2>Media Stage</h2>
         <ul>
-          <li>10:00 – Zmeny v mediálnom prostredí</li>
-          <li>11:00 – Panel: TV vs. Online</li>
-          <li>12:00 – Budúcnosť printu</li>
+          <li data-time="10:00">10:00 – Zmeny v mediálnom prostredí</li>
+          <li data-time="11:00">11:00 – Panel: TV vs. Online</li>
+          <li data-time="12:00">12:00 – Budúcnosť printu</li>
         </ul>
       `
     };
+
+    function highlightCurrentTalk() {
+      const now = new Date();
+      const currentMinutes = now.getHours() * 60 + now.getMinutes();
+      document.querySelectorAll('#program li').forEach(li => {
+        li.classList.remove('current');
+        const timeAttr = li.getAttribute('data-time');
+        if (timeAttr) {
+          const [h, m] = timeAttr.split(':').map(Number);
+          const talkMinutes = h * 60 + m;
+          if (currentMinutes >= talkMinutes && currentMinutes < talkMinutes + 60) {
+            li.classList.add('current');
+          }
+        }
+      });
+    }
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
@@ -155,9 +188,17 @@
         tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
         tab.setAttribute('aria-selected', 'true');
         const stage = tab.getAttribute('data-stage');
-        program.innerHTML = schedules[stage];
+        program.style.opacity = 0;
+        setTimeout(() => {
+          program.innerHTML = schedules[stage];
+          program.style.opacity = 1;
+          highlightCurrentTalk();
+        }, 200);
       });
     });
+
+    highlightCurrentTalk();
+    setInterval(highlightCurrentTalk, 60000);
   </script>
 </body>
 </html>
