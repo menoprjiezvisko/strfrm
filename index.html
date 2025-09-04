@@ -66,6 +66,7 @@
       text-align: left;
       display: block;
       margin-top: 10px;
+      list-style: none;
     }
     li.current {
       background: rgba(255,255,255,0.1);
@@ -114,18 +115,18 @@
   <main id="program">
     <h2>Marketing Stage</h2>
     <ul>
-          <li data-time="10:00">10:00 – Otvorenie konferencie</li>
-          <li data-time="10:30">10:30 – Trendy v marketingu 2025</li>
-          <li data-time="11:30">11:30 – Panelová diskusia: Budúcnosť značiek</li>
-          <li data-time="12:00">12:00 – Otvorenie konferencie</li>
-          <li data-time="12:45">12:45 – Trendy v marketingu 2025</li>
-          <li data-time="13:30">13:30 – Panelová diskusia: Budúcnosť značiek</li>
-          <li data-time="14:40">14:40 – Digitalizácia médií</li>
-          <li data-time="15:15">15:15 – AI v reklame</li>
-          <li data-time="16:00">16:00 – Networking</li>
-          <li data-time="16:45">16:45 – Zmeny v mediálnom prostredí</li>
-          <li data-time="18:00">18:00 – Panel: TV vs. Online</li>
-          <li data-time="19:00">19:00 – Budúcnosť printu</li>
+      <li data-start="09:30" data-end="10:30">09:30 - 10:30 Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
+      <li data-start="10:30" data-end="11:00">10:30 - 11:00 Retail Media: Strategická príležitosť</li>
+      <li data-start="11:00" data-end="11:30">11:00 - 11:30 Rastiete s nami už 30 rokov</li>
+      <li data-start="11:30" data-end="12:00">11:30 - 12:00 Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
+      <li data-start="12:00" data-end="12:30">12:00 - 12:30 Gaming: Cesta k angažovanému publiku</li>
+      <li data-start="12:30" data-end="13:00">12:30 - 13:00 Power of Sport</li>
+      <li data-start="13:00" data-end="13:45">13:00 - 13:45 Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
+      <li data-start="13:45" data-end="14:00">13:45 - 14:00 Retail Media: Strategická príležitosť</li>
+      <li data-start="14:00" data-end="15:00">14:00 - 15:00 Rastiete s nami už 30 rokov</li>
+      <li data-start="15:00" data-end="15:30">15:00 - 15:30 Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
+      <li data-start="15:30" data-end="15:45">15:30 - 15:45 Gaming: Cesta k angažovanému publiku</li>
+      <li data-start="15:45" data-end="17:00">15:45 - 17:00 Power of Sport</li>
     </ul>
   </main>
 
@@ -153,66 +154,70 @@
       marketing: `
         <h2>Marketing Stage</h2>
         <ul>
-          <li data-time="10:00">10:00 – Otvorenie konferencie</li>
-          <li data-time="10:30">10:30 – Trendy v marketingu 2025</li>
-          <li data-time="11:30">11:30 – Panelová diskusia: Budúcnosť značiek</li>
-          <li data-time="12:00">12:00 – Otvorenie konferencie</li>
-          <li data-time="12:45">12:45 – Trendy v marketingu 2025</li>
-          <li data-time="13:30">13:30 – Panelová diskusia: Budúcnosť značiek</li>
-          <li data-time="14:40">14:40 – Digitalizácia médií</li>
-          <li data-time="15:15">15:15 – AI v reklame</li>
-          <li data-time="16:00">16:00 – Networking</li>
-          <li data-time="16:45">16:45 – Zmeny v mediálnom prostredí</li>
-          <li data-time="18:00">18:00 – Panel: TV vs. Online</li>
-          <li data-time="19:00">19:00 – Budúcnosť printu</li>
+      <li data-start="09:30" data-end="10:30">09:30 - 10:30 Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
+      <li data-start="10:30" data-end="11:00">10:30 - 11:00 Retail Media: Strategická príležitosť</li>
+      <li data-start="11:00" data-end="11:30">11:00 - 11:30 Rastiete s nami už 30 rokov</li>
+      <li data-start="11:30" data-end="12:00">11:30 - 12:00 Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
+      <li data-start="12:00" data-end="12:30">12:00 - 12:30 Gaming: Cesta k angažovanému publiku</li>
+      <li data-start="12:30" data-end="13:00">12:30 - 13:00 Power of Sport</li>
+      <li data-start="13:00" data-end="13:45">13:00 - 13:45 Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
+      <li data-start="13:45" data-end="14:00">13:45 - 14:00 Retail Media: Strategická príležitosť</li>
+      <li data-start="14:00" data-end="15:00">14:00 - 15:00 Rastiete s nami už 30 rokov</li>
+      <li data-start="15:00" data-end="15:30">15:00 - 15:30 Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
+      <li data-start="15:30" data-end="15:45">15:30 - 15:45 Gaming: Cesta k angažovanému publiku</li>
+      <li data-start="15:45" data-end="17:00">15:45 - 17:00 Power of Sport</li>
         </ul>
       `,
       digital: `
         <h2>Digital Stage</h2>
         <ul>
-          <li data-time="10:00">10:00 – Otvorenie konferencie</li>
-          <li data-time="10:30">10:30 – Trendy v marketingu 2025</li>
-          <li data-time="11:30">11:30 – Panelová diskusia: Budúcnosť značiek</li>
-          <li data-time="12:00">12:00 – Otvorenie konferencie</li>
-          <li data-time="12:45">12:45 – Trendy v marketingu 2025</li>
-          <li data-time="13:30">13:30 – Panelová diskusia: Budúcnosť značiek</li>
-          <li data-time="14:40">14:40 – Digitalizácia médií</li>
-          <li data-time="15:15">15:15 – AI v reklame</li>
-          <li data-time="16:00">16:00 – Networking</li>
-          <li data-time="16:45">16:45 – Zmeny v mediálnom prostredí</li>
-          <li data-time="18:00">18:00 – Panel: TV vs. Online</li>
-          <li data-time="19:00">19:00 – Budúcnosť printu</li>
+      <li data-start="09:30" data-end="10:30">09:30 - 10:30 Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
+      <li data-start="10:30" data-end="11:00">10:30 - 11:00 Retail Media: Strategická príležitosť</li>
+      <li data-start="11:00" data-end="11:30">11:00 - 11:30 Rastiete s nami už 30 rokov</li>
+      <li data-start="11:30" data-end="12:00">11:30 - 12:00 Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
+      <li data-start="12:00" data-end="12:30">12:00 - 12:30 Gaming: Cesta k angažovanému publiku</li>
+      <li data-start="12:30" data-end="13:00">12:30 - 13:00 Power of Sport</li>
+      <li data-start="13:00" data-end="13:45">13:00 - 13:45 Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
+      <li data-start="13:45" data-end="14:00">13:45 - 14:00 Retail Media: Strategická príležitosť</li>
+      <li data-start="14:00" data-end="15:00">14:00 - 15:00 Rastiete s nami už 30 rokov</li>
+      <li data-start="15:00" data-end="15:30">15:00 - 15:30 Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
+      <li data-start="15:30" data-end="15:45">15:30 - 15:45 Gaming: Cesta k angažovanému publiku</li>
+      <li data-start="15:45" data-end="17:00">15:45 - 17:00 Power of Sport</li>
         </ul>
       `,
       media: `
         <h2>Media Stage</h2>
         <ul>
-          <li data-time="10:00">10:00 – Otvorenie konferencie</li>
-          <li data-time="10:30">10:30 – Trendy v marketingu 2025</li>
-          <li data-time="11:30">11:30 – Panelová diskusia: Budúcnosť značiek</li>
-          <li data-time="12:00">12:00 – Otvorenie konferencie</li>
-          <li data-time="12:45">12:45 – Trendy v marketingu 2025</li>
-          <li data-time="13:30">13:30 – Panelová diskusia: Budúcnosť značiek</li>
-          <li data-time="14:40">14:40 – Digitalizácia médií</li>
-          <li data-time="15:15">15:15 – AI v reklame</li>
-          <li data-time="16:00">16:00 – Networking</li>
-          <li data-time="16:45">16:45 – Zmeny v mediálnom prostredí</li>
-          <li data-time="18:00">18:00 – Panel: TV vs. Online</li>
-          <li data-time="19:00">19:00 – Budúcnosť printu</li>
+      <li data-start="09:30" data-end="10:30">09:30 - 10:30 Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
+      <li data-start="10:30" data-end="11:00">10:30 - 11:00 Retail Media: Strategická príležitosť</li>
+      <li data-start="11:00" data-end="11:30">11:00 - 11:30 Rastiete s nami už 30 rokov</li>
+      <li data-start="11:30" data-end="12:00">11:30 - 12:00 Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
+      <li data-start="12:00" data-end="12:30">12:00 - 12:30 Gaming: Cesta k angažovanému publiku</li>
+      <li data-start="12:30" data-end="13:00">12:30 - 13:00 Power of Sport</li>
+      <li data-start="13:00" data-end="13:45">13:00 - 13:45 Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
+      <li data-start="13:45" data-end="14:00">13:45 - 14:00 Retail Media: Strategická príležitosť</li>
+      <li data-start="14:00" data-end="15:00">14:00 - 15:00 Rastiete s nami už 30 rokov</li>
+      <li data-start="15:00" data-end="15:30">15:00 - 15:30 Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
+      <li data-start="15:30" data-end="15:45">15:30 - 15:45 Gaming: Cesta k angažovanému publiku</li>
+      <li data-start="15:45" data-end="17:00">15:45 - 17:00 Power of Sport</li>
         </ul>
       `
     };
+
 
     function highlightCurrentTalk() {
       const now = new Date();
       const currentMinutes = now.getHours() * 60 + now.getMinutes();
       document.querySelectorAll('#program li').forEach(li => {
         li.classList.remove('current');
-        const timeAttr = li.getAttribute('data-time');
-        if (timeAttr) {
-          const [h, m] = timeAttr.split(':').map(Number);
-          const talkMinutes = h * 60 + m;
-          if (currentMinutes >= talkMinutes && currentMinutes < talkMinutes + 60) {
+        const start = li.getAttribute('data-start');
+        const end = li.getAttribute('data-end');
+        if (start && end) {
+          const [sh, sm] = start.split(':').map(Number);
+          const [eh, em] = end.split(':').map(Number);
+          const startMinutes = sh*60 + sm;
+          const endMinutes = eh*60 + em;
+          if (currentMinutes >= startMinutes && currentMinutes < endMinutes) {
             li.classList.add('current');
           }
         }
@@ -236,7 +241,7 @@
     });
 
     highlightCurrentTalk();
-    //setInterval(highlightCurrentTalk, 60000);
+    setInterval(highlightCurrentTalk, 60000);
   </script>
 </body>
 </html>
