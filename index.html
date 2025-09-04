@@ -155,18 +155,19 @@
   <main id="program">
     <h2>Marketing Stage</h2>
     <ul>
-      <li data-start="09:30" data-end="10:30"> <span class="time">09:30 - 10:30</span> Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
-      <li data-start="10:30" data-end="11:00"> <span class="time">10:30 - 11:00</span> Retail Media: Strategická príležitosť</li>
-      <li data-start="11:00" data-end="11:30"> <span class="time">11:00 - 11:30</span> Rastiete s nami už 30 rokov</li>
-      <li data-start="11:30" data-end="12:00"> <span class="time">11:30 - 12:00</span> Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
-      <li data-start="12:00" data-end="12:30"> <span class="time">12:00 - 12:30</span> Gaming: Cesta k angažovanému publiku</li>
-      <li data-start="12:30" data-end="13:00"> <span class="time">12:30 - 13:00</span> Power of Sport</li>
-      <li data-start="13:00" data-end="13:45"> <span class="time">13:00 - 13:45</span> Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
-      <li data-start="13:45" data-end="14:00"> <span class="time">13:45 - 14:00</span> Retail Media: Strategická príležitosť</li>
-      <li data-start="14:00" data-end="15:00"> <span class="time">14:00 - 15:00</span> Rastiete s nami už 30 rokov</li>
-      <li data-start="15:00" data-end="15:30"> <span class="time">15:00 - 15:30</span> Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
-      <li data-start="15:30" data-end="15:45"> <span class="time">15:30 - 15:45</span> Gaming: Cesta k angažovanému publiku</li>
-      <li data-start="15:45" data-end="17:00"> <span class="time">15:45 - 17:00</span> Power of Sport</li>
+      <li data-start="09:00" data-end="09:45"><span class="time">09:00 - 09:45</span> Úvod do moderného marketingu – Jana Nováková</li>
+      <li data-start="09:45" data-end="10:30"><span class="time">09:45 - 10:30</span> Brand storytelling: Ako zaujať publikum</li>
+      <li data-start="10:30" data-end="11:15"><span class="time">10:30 - 11:15</span> Kreatívne kampane 2025 – Peter Kováč</li>
+      <li data-start="11:15" data-end="12:00"><span class="time">11:15 - 12:00</span> Retail marketing: Triky a stratégie</li>
+      <li data-start="12:00" data-end="12:45"><span class="time">12:00 - 12:45</span> Lunch & Networking</li>
+      <li data-start="12:45" data-end="13:30"><span class="time">12:45 - 13:30</span> Influencer marketing: Trendy a úspešné kampane</li>
+      <li data-start="13:30" data-end="14:15"><span class="time">13:30 - 14:15</span> Marketing automation v praxi</li>
+      <li data-start="14:15" data-end="15:00"><span class="time">14:15 - 15:00</span> Case study: Najlepšie reklamy posledného roka</li>
+      <li data-start="15:00" data-end="15:45"><span class="time">15:00 - 15:45</span> Email marketing: Personalizácia a konverzie</li>
+      <li data-start="15:45" data-end="16:30"><span class="time">15:45 - 16:30</span> SEO pre marketingových odborníkov</li>
+      <li data-start="16:30" data-end="17:15"><span class="time">16:30 - 17:15</span> Video marketing a kreatívne vizuály</li>
+      <li data-start="17:15" data-end="18:00"><span class="time">17:15 - 18:00</span> Event marketing: Ako zaujať publikum offline</li>
+      <li data-start="18:00" data-end="19:00"><span class="time">18:00 - 19:00</span> Panelová diskusia: Budúcnosť marketingu</li>
     </ul>
   </main>
 
@@ -191,58 +192,62 @@
     const program = document.getElementById('program');
 
     const schedules = {
-      marketing: `
-        <h2>Marketing Stage</h2>
-        <ul>
-      <li data-start="09:30" data-end="10:30"> <span class="time">09:30 - 10:30</span> Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
-      <li data-start="10:30" data-end="11:00"> <span class="time">10:30 - 11:00</span> Retail Media: Strategická príležitosť</li>
-      <li data-start="11:00" data-end="11:30"> <span class="time">11:00 - 11:30</span> Rastiete s nami už 30 rokov</li>
-      <li data-start="11:30" data-end="12:00"> <span class="time">11:30 - 12:00</span> Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
-      <li data-start="12:00" data-end="12:30"> <span class="time">12:00 - 12:30</span> Gaming: Cesta k angažovanému publiku</li>
-      <li data-start="12:30" data-end="13:00"> <span class="time">12:30 - 13:00</span> Power of Sport</li>
-      <li data-start="13:00" data-end="13:45"> <span class="time">13:00 - 13:45</span> Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
-      <li data-start="13:45" data-end="14:00"> <span class="time">13:45 - 14:00</span> Retail Media: Strategická príležitosť</li>
-      <li data-start="14:00" data-end="15:00"> <span class="time">14:00 - 15:00</span> Rastiete s nami už 30 rokov</li>
-      <li data-start="15:00" data-end="15:30"> <span class="time">15:00 - 15:30</span> Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
-      <li data-start="15:30" data-end="15:45"> <span class="time">15:30 - 15:45</span> Gaming: Cesta k angažovanému publiku</li>
-      <li data-start="15:45" data-end="17:00"> <span class="time">15:45 - 17:00</span> Power of Sport</li>
-        </ul>
-      `,
-      digital: `
-        <h2>Digital Stage</h2>
-        <ul>
-      <li data-start="09:30" data-end="10:30"> <span class="time">09:30 - 10:30</span> Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
-      <li data-start="10:30" data-end="11:00"> <span class="time">10:30 - 11:00</span> Retail Media: Strategická príležitosť</li>
-      <li data-start="11:00" data-end="11:30"> <span class="time">11:00 - 11:30</span> Rastiete s nami už 30 rokov</li>
-      <li data-start="11:30" data-end="12:00"> <span class="time">11:30 - 12:00</span> Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
-      <li data-start="12:00" data-end="12:30"> <span class="time">12:00 - 12:30</span> Gaming: Cesta k angažovanému publiku</li>
-      <li data-start="12:30" data-end="13:00"> <span class="time">12:30 - 13:00</span> Power of Sport</li>
-      <li data-start="13:00" data-end="13:45"> <span class="time">13:00 - 13:45</span> Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
-      <li data-start="13:45" data-end="14:00"> <span class="time">13:45 - 14:00</span> Retail Media: Strategická príležitosť</li>
-      <li data-start="14:00" data-end="15:00"> <span class="time">14:00 - 15:00</span> Rastiete s nami už 30 rokov</li>
-      <li data-start="15:00" data-end="15:30"> <span class="time">15:00 - 15:30</span> Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
-      <li data-start="15:30" data-end="15:45"> <span class="time">15:30 - 15:45</span> Gaming: Cesta k angažovanému publiku</li>
-      <li data-start="15:45" data-end="17:00"> <span class="time">15:45 - 17:00</span> Power of Sport</li>
-        </ul>
-      `,
-      media: `
-        <h2>Media Stage</h2>
-        <ul>
-      <li data-start="09:30" data-end="10:30"> <span class="time">09:30 - 10:30</span> Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
-      <li data-start="10:30" data-end="11:00"> <span class="time">10:30 - 11:00</span> Retail Media: Strategická príležitosť</li>
-      <li data-start="11:00" data-end="11:30"> <span class="time">11:00 - 11:30</span> Rastiete s nami už 30 rokov</li>
-      <li data-start="11:30" data-end="12:00"> <span class="time">11:30 - 12:00</span> Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
-      <li data-start="12:00" data-end="12:30"> <span class="time">12:00 - 12:30</span> Gaming: Cesta k angažovanému publiku</li>
-      <li data-start="12:30" data-end="13:00"> <span class="time">12:30 - 13:00</span> Power of Sport</li>
-      <li data-start="13:00" data-end="13:45"> <span class="time">13:00 - 13:45</span> Ako získať Grand Prix z Cannes – Iva Welker (VML Czechia), Jake Barrow (VML Czechia)</li>
-      <li data-start="13:45" data-end="14:00"> <span class="time">13:45 - 14:00</span> Retail Media: Strategická príležitosť</li>
-      <li data-start="14:00" data-end="15:00"> <span class="time">14:00 - 15:00</span> Rastiete s nami už 30 rokov</li>
-      <li data-start="15:00" data-end="15:30"> <span class="time">15:00 - 15:30</span> Najlepšie reklamy 30 rokov – Michal Vyšinský (2muse)</li>
-      <li data-start="15:30" data-end="15:45"> <span class="time">15:30 - 15:45</span> Gaming: Cesta k angažovanému publiku</li>
-      <li data-start="15:45" data-end="17:00"> <span class="time">15:45 - 17:00</span> Power of Sport</li>
-        </ul>
-      `
-    };
+  marketing: `
+    <h2>Marketing Stage</h2>
+    <ul>
+      <li data-start="09:00" data-end="09:45"><span class="time">09:00 - 09:45</span> Úvod do moderného marketingu – Jana Nováková</li>
+      <li data-start="09:45" data-end="10:30"><span class="time">09:45 - 10:30</span> Brand storytelling: Ako zaujať publikum</li>
+      <li data-start="10:30" data-end="11:15"><span class="time">10:30 - 11:15</span> Kreatívne kampane 2025 – Peter Kováč</li>
+      <li data-start="11:15" data-end="12:00"><span class="time">11:15 - 12:00</span> Retail marketing: Triky a stratégie</li>
+      <li data-start="12:00" data-end="12:45"><span class="time">12:00 - 12:45</span> Lunch & Networking</li>
+      <li data-start="12:45" data-end="13:30"><span class="time">12:45 - 13:30</span> Influencer marketing: Trendy a úspešné kampane</li>
+      <li data-start="13:30" data-end="14:15"><span class="time">13:30 - 14:15</span> Marketing automation v praxi</li>
+      <li data-start="14:15" data-end="15:00"><span class="time">14:15 - 15:00</span> Case study: Najlepšie reklamy posledného roka</li>
+      <li data-start="15:00" data-end="15:45"><span class="time">15:00 - 15:45</span> Email marketing: Personalizácia a konverzie</li>
+      <li data-start="15:45" data-end="16:30"><span class="time">15:45 - 16:30</span> SEO pre marketingových odborníkov</li>
+      <li data-start="16:30" data-end="17:15"><span class="time">16:30 - 17:15</span> Video marketing a kreatívne vizuály</li>
+      <li data-start="17:15" data-end="18:00"><span class="time">17:15 - 18:00</span> Event marketing: Ako zaujať publikum offline</li>
+      <li data-start="18:00" data-end="19:00"><span class="time">18:00 - 19:00</span> Panelová diskusia: Budúcnosť marketingu</li>
+    </ul>
+  `,
+  digital: `
+    <h2>Digital Stage</h2>
+    <ul>
+      <li data-start="09:15" data-end="10:00"><span class="time">09:15 - 10:00</span> Digitálna transformácia firiem – Lucia Hrivnáková</li>
+      <li data-start="10:00" data-end="10:45"><span class="time">10:00 - 10:45</span> SEO a content marketing: Tipy a triky</li>
+      <li data-start="10:45" data-end="11:30"><span class="time">10:45 - 11:30</span> E-commerce: Ako zvýšiť predaj online</li>
+      <li data-start="11:30" data-end="12:15"><span class="time">11:30 - 12:15</span> Social media kampane, ktoré fungujú</li>
+      <li data-start="12:15" data-end="13:00"><span class="time">12:15 - 13:00</span> Lunch & Networking</li>
+      <li data-start="13:00" data-end="13:45"><span class="time">13:00 - 13:45</span> UX & UI: Digitálne produkty, ktoré ľudia milujú</li>
+      <li data-start="13:45" data-end="14:30"><span class="time">13:45 - 14:30</span> PPC reklama: Ako dosiahnuť maximálny ROI</li>
+      <li data-start="14:30" data-end="15:15"><span class="time">14:30 - 15:15</span> Analytika a meranie úspechu kampaní</li>
+      <li data-start="15:15" data-end="16:00"><span class="time">15:15 - 16:00</span> Automatizácia procesov v digitálnom marketingu</li>
+      <li data-start="16:00" data-end="16:45"><span class="time">16:00 - 16:45</span> ChatGPT a AI v digitálnom marketingu</li>
+      <li data-start="16:45" data-end="17:30"><span class="time">16:45 - 17:30</span> Webové aplikácie: Ako zlepšiť UX</li>
+      <li data-start="17:30" data-end="18:15"><span class="time">17:30 - 18:15</span> Mobilný marketing a app campaigns</li>
+      <li data-start="18:15" data-end="19:00"><span class="time">18:15 - 19:00</span> Panelová diskusia: Budúcnosť digitálneho sveta</li>
+    </ul>
+  `,
+  media: `
+    <h2>Media Stage</h2>
+    <ul>
+      <li data-start="09:30" data-end="10:15"><span class="time">09:30 - 10:15</span> Nové trendy v televíznej reklame – Martin Blaško</li>
+      <li data-start="10:15" data-end="11:00"><span class="time">10:15 - 11:00</span> Podcasty a rádio: Ako zaujať poslucháčov</li>
+      <li data-start="11:00" data-end="11:45"><span class="time">11:00 - 11:45</span> Mediálne stratégie pre sociálne siete</li>
+      <li data-start="11:45" data-end="12:30"><span class="time">11:45 - 12:30</span> Storytelling v online médiách</li>
+      <li data-start="12:30" data-end="13:15"><span class="time">12:30 - 13:15</span> Lunch & Networking</li>
+      <li data-start="13:15" data-end="14:00"><span class="time">13:15 - 14:00</span> Video marketing: Ako vytvoriť virálny obsah</li>
+      <li data-start="14:00" data-end="14:45"><span class="time">14:00 - 14:45</span> Mediálna analytika a reportovanie</li>
+      <li data-start="14:45" data-end="15:30"><span class="time">14:45 - 15:30</span> Panelová diskusia: Budúcnosť médií</li>
+      <li data-start="15:30" data-end="16:15"><span class="time">15:30 - 16:15</span> Influencer a YouTube marketing</li>
+      <li data-start="16:15" data-end="17:00"><span class="time">16:15 - 17:00</span> Content tvorba pre nové platformy</li>
+      <li data-start="17:00" data-end="17:45"><span class="time">17:00 - 17:45</span> Podcasting a storytelling v praxi</li>
+      <li data-start="17:45" data-end="18:30"><span class="time">17:45 - 18:30</span> Reklamné formáty budúcnosti</li>
+      <li data-start="18:30" data-end="19:00"><span class="time">18:30 - 19:00</span> Záver a networking – Media Insights</li>
+    </ul>
+  `
+};
+
 
 
     function highlightCurrentTalk() {
