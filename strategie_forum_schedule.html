@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategie Forum Program</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background: url('bckground.jpg') center/cover no-repeat;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 1.8rem;
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      background: #111;
+      border-bottom: 2px solid #ff007f;
+    }
+    .tab {
+      flex: 1;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s;
+    }
+    .tab.active {
+      border-bottom: 3px solid #ff007f;
+      color: #ff007f;
+    }
+    .content {
+      padding: 20px;
+    }
+    footer {
+      background: #111;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #ff007f;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      .tab {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>STRATEGIE FORUM 2025</h1>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-stage="marketing">Marketing</div>
+    <div class="tab" data-stage="digital">Digital</div>
+    <div class="tab" data-stage="media">Media</div>
+  </div>
+
+  <div class="content" id="program">
+    <h2>Marketing Stage</h2>
+    <ul>
+      <li>10:00 - Otvorenie konferencie</li>
+      <li>10:30 - Trendy v marketingu 2025</li>
+      <li>11:30 - Panelová diskusia: Budúcnosť značiek</li>
+    </ul>
+  </div>
+
+  <footer>
+    <img src="strategie_forum_2025_1920x1080.jpg" alt="Logo" style="width:100px; display:block; margin:0 auto 10px;" />
+    <div>
+      <a href="#">Kontakt</a>|
+      <a href="#">O konferencii</a>|
+      <a href="#">Mapa</a>
+    </div>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const program = document.getElementById('program');
+
+    const schedules = {
+      marketing: `
+        <h2>Marketing Stage</h2>
+        <ul>
+          <li>10:00 - Otvorenie konferencie</li>
+          <li>10:30 - Trendy v marketingu 2025</li>
+          <li>11:30 - Panelová diskusia: Budúcnosť značiek</li>
+        </ul>
+      `,
+      digital: `
+        <h2>Digital Stage</h2>
+        <ul>
+          <li>10:00 - Digitalizácia médií</li>
+          <li>11:00 - AI v reklame</li>
+          <li>12:00 - Networking</li>
+        </ul>
+      `,
+      media: `
+        <h2>Media Stage</h2>
+        <ul>
+          <li>10:00 - Zmeny v mediálnom prostredí</li>
+          <li>11:00 - Panel: TV vs. Online</li>
+          <li>12:00 - Budúcnosť printu</li>
+        </ul>
+      `
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelector('.tab.active').classList.remove('active');
+        tab.classList.add('active');
+        const stage = tab.getAttribute('data-stage');
+        program.innerHTML = schedules[stage];
+      });
+    });
+  </script>
+</body>
+</html>
